@@ -37,8 +37,7 @@
     "test:watch": "jest --watch",
     "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
-    "commit": "git-cz",
-    "precommit": "lint-staged"
+    "commit": "git-cz"
   },
   "lint-staged": {
     "{src,test}/**/*.{ts,tsx,json}": [
@@ -120,5 +119,10 @@
     "react": "^16.5.2",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-resolve": "0.0.1-predev.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
