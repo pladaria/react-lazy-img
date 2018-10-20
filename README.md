@@ -50,8 +50,8 @@ import Img from `react-lazy-img`;
 ```
 
 -   `offset` - _number:_ distance to viewport to start loading
--   `fallback` - _() => React.Node`_: result of this function will be rendered while not loaded
--   `transition` - _string_: CSS Transition property
+-   `fallback` - _() => React.Node:_ result of this function will be rendered while not loaded
+-   `transition` - _string:_ CSS Transition property
 
 ## Special thanks
 
