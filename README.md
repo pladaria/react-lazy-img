@@ -8,7 +8,9 @@ Uses `IntersectionObserver` under the hood. If not available, image will be show
 
 ## Demo
 
-TBD
+:zap: [Live demo](https://w7o55mqoj5.codesandbox.io/)
+
+:wrench: [Demo source in codesandbox](https://codesandbox.io/s/w7o55mqoj5)
 
 ## Install
 
