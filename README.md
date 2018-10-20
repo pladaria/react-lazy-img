@@ -38,6 +38,8 @@ Image will start loading when its distance to the viewport is less than 500px. O
 
 `width` and `height` props are optional but recommended to avoid browser reflows.
 
+You can pass any standard `<img>` attribute.
+
 ## Not so simple example
 
 ```jsx
@@ -50,16 +52,18 @@ import Img from `react-lazy-img`;
   width={200}
   height={100}
   offset={1000}
-  fallback={() => <img src="/path/to/low-res-img.png">}
+  fallback={() => <img src="/path/to/low-res-img.png" />}
   transition="opacity 1s ease-in"
 />
 ```
 
-That's it, there are no more options
+-   `offset` - _number:_ distance to viewport to start loading
+-   `fallback` - _() => React.Node`_: result of this function will be rendered while not loaded
+-   `transition` - _string_: CSS Transition rule to define transition
 
 ## Special thanks
 
-**@fdaciuk** for transferring npm package ownership
+**@fdaciuk** for kindly transferring npm package ownership
 
 ## License
 
