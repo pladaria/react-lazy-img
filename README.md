@@ -4,7 +4,7 @@ Very simple drop in replacement of `<img>` with lazy loading and fade-in transit
 
 No frills, it just works.
 
-Uses `IntesectionObserver` under the hood. If not available, image will be shown as is.
+Uses `IntersectionObserver` under the hood. If not available, image will be shown as is.
 
 ## Demo
 
@@ -12,15 +12,7 @@ TBD
 
 ## Install
 
-```
-yarn add react-lazy-img
-```
-
-or
-
-```
-npm i react-lazy-img
-```
+`yarn add react-lazy-img` or `npm i react-lazy-img`
 
 ## Simple example
 
