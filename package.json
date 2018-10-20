@@ -5,13 +5,15 @@
   "keywords": [
     "react",
     "img",
+    "image",
     "lazy",
     "loader",
-    "performance",
     "loading",
+    "performance",
     "defer",
     "intersection",
-    "observer"
+    "observer",
+    "intersectionobserver"
   ],
   "main": "dist/react-lazy-img.umd.js",
   "module": "dist/react-lazy-img.es5.js",
@@ -40,7 +42,7 @@
     "commit": "git-cz"
   },
   "lint-staged": {
-    "{src,test}/**/*.{ts,tsx,json}": [
+    "{src,test}/**/*.{ts,tsx,json,md}": [
       "prettier --write",
       "git add"
     ]
@@ -93,6 +95,7 @@
     "@commitlint/config-conventional": "^7.1.2",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.11.0",
+    "@types/react": "^16.4.18",
     "commitizen": "^3.0.0",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
@@ -102,9 +105,12 @@
     "jest-config": "^23.6.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
+    "react": "^16.5.2",
     "rimraf": "^2.6.2",
     "rollup": "^0.66.2",
     "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-resolve": "0.0.1-predev.1",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "ts-jest": "^23.10.2",
@@ -114,12 +120,7 @@
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.0.3"
   },
-  "dependencies": {
-    "@types/react": "^16.4.16",
-    "react": "^16.5.2",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-resolve": "0.0.1-predev.1"
-  },
+  "dependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
