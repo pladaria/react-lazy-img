@@ -10,8 +10,6 @@ Uses `IntesectionObserver` under the hood. If not available, image will be shown
 
 TBD
 
-## Notes
-
 ## Install
 
 ```
@@ -63,7 +61,7 @@ import Img from `react-lazy-img`;
 
 ## Special thanks
 
-**@fdaciuk** for kindly transferring npm package ownership
+**@fdaciuk** for kindly transferring npm package name ownership
 
 ## License
 
