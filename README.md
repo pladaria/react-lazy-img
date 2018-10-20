@@ -1,9 +1,5 @@
 # react-lazy-img
 
-<p align="center">
-<img width="300" src="./slakoth.png"/>
-</p>
-
 Very simple drop in replacement of `<img>` with lazy loading and fade-in transition.
 
 No frills, it just works.
