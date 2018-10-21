@@ -82,10 +82,8 @@ export default class Img extends React.Component<Props, State> {
         };
 
         const containerStyle: React.CSSProperties = {
-            ...imgStyle,
-            border: 'none',
-            margin: 0,
-            padding: 0,
+            width: imgStyle.width,
+            height: imgStyle.height,
             position: 'relative'
         };
 
