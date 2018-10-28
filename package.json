@@ -1,6 +1,6 @@
 {
   "name": "react-lazy-img",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React <img> drop-in replacement for lazy image loading",
   "keywords": [
     "react",
