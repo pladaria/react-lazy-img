@@ -1,16 +1,16 @@
 # react-lazy-img
 
-Very simple drop in replacement of `<img>` with lazy loading and fade-in transition.
+Very simple drop in replacement of `<img>` with lazy loading (images outside the viewport won't be loaded) and fade-in transition.
 
 No frills, it just works.
 
-Uses `IntersectionObserver` under the hood. If not available, image will be shown as is.
+Uses `IntersectionObserver` under the hood (can be [polyfilled](https://github.com/w3c/IntersectionObserver/tree/master/polyfill)). If not available, image will be shown as is.
 
 ## Demo
 
 :zap: [Live demo](https://w7o55mqoj5.codesandbox.io/)
 
-:wrench: [Demo source in codesandbox](https://codesandbox.io/s/w7o55mqoj5)
+:wrench: [Demo in codesandbox](https://codesandbox.io/s/w7o55mqoj5)
 
 ## Install
 
@@ -26,13 +26,13 @@ import Img from `react-lazy-img`;
 <Img src="/path/to/img.png" width={200} height={100} />
 ```
 
-Image will start loading when its distance to the viewport is less than 500px. Once loaded, it will fade in (0.3s ease-in).
+Image will start loading when its distance to the viewport is less than 500px (can be configured). Once loaded, it will fade in (by default `0.3s ease-in`, can be configured).
 
 `width` and `height` props are optional but recommended to avoid browser reflows.
 
 You can pass any standard `<img>` attribute.
 
-## Not so simple example
+## Full featured example
 
 ```jsx
 import Img from `react-lazy-img`;
