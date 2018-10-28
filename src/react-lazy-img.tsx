@@ -31,6 +31,7 @@ export default class Img extends React.Component<Props, State> {
 
     ref: any;
     observer?: IntersectionObserver;
+    idleCallbackId?: RequestIdleCallbackId;
 
     constructor(props: Props) {
         super(props);
@@ -53,6 +54,13 @@ export default class Img extends React.Component<Props, State> {
         }
     }
 
+    componentWillUnmount() {
+        if (this.idleCallbackId) {
+            window.cancelIdleCallback(this.idleCallbackId);
+            this.idleCallbackId = undefined;
+        }
+    }
+
     handleIntersection: IntersectionObserverCallback = entries => {
         if (!entries[0].isIntersecting) {
             return;
@@ -67,9 +75,10 @@ export default class Img extends React.Component<Props, State> {
     };
 
     handleTransitionEnd = () => {
-        window.requestIdleCallback(
+        this.idleCallbackId = window.requestIdleCallback(
             () => {
                 this.setState({ isVisible: true });
+                this.idleCallbackId = undefined;
             },
             { timeout: 3000 }
         );
