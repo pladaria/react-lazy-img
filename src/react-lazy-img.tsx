@@ -1,4 +1,5 @@
 import * as React from 'react';
+import 'requestidlecallback-polyfill';
 
 interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
     offset: number;
@@ -66,7 +67,12 @@ export default class Img extends React.Component<Props, State> {
     };
 
     handleTransitionEnd = () => {
-        this.setState({ isVisible: true });
+        window.requestIdleCallback(
+            () => {
+                this.setState({ isVisible: true });
+            },
+            { timeout: 3000 }
+        );
     };
 
     render() {
