@@ -2,8 +2,8 @@ import * as React from 'react';
 import 'requestidlecallback-polyfill';
 
 interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
-    offset: number;
-    transition: string;
+    offset?: number;
+    transition?: string;
     fallback?: () => React.ReactNode;
 }
 
